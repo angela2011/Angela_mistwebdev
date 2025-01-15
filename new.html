@@ -7,14 +7,50 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>My website</title>
 </head>
-<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">My Website</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Personal details</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#doctors">Our doctors</a></li>
+                        <li><a class="dropdown-item" href="#hospital">Find nearest hospital</a></li>
+                        <li><a class="dropdown-item" href="#review">Reviews</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<body style="background-color: lightblue;">
     <h1>A visit to the doctor?</h1>
     <p style="background-color: rgb(238, 238, 148)); font-family: Arial;"></p>
         <link rel="stylesheet" href="styling.css">
-        <p>They say an apple a day keeps the doctor away but also we hate apples </p>
+        <p>They say an apple a day keeps the doctor away but also we hate apples🍎 </p>
     <h2><b> What kind of doctor would you like to visit today?
         Please fill in your personal details:
     </b></h2>
+    <section id = "about"></section>
     <form action="submit_form.php" method="POST">
         <!-- Text Input -->
         <label for="name">Name:</label>
@@ -31,7 +67,7 @@
         <input type="Phone no." id="Phone no." name="Phone no." required>
         <br><br>
 
-
+        <p>How are you feeling today? What are your symptoms?</p>
         <!-- Dropdown -->
         <label for="Symptoms">Symptoms:</label>
         <select id="Symptomsr" name="Symptoms" required>
@@ -48,7 +84,10 @@
            
         </select>
         <br><br>
-        <p>If other please</p>
+        <p>If other please please mention symptoms and howl long sickness as lasted for:</p>
+        <label for="Symptom.">Symptom:</label>
+        <input type="Symptom." id="Symptom" name="Symptom" required>
+        <br><br>
 
         <!-- Radio Buttons -->
         <label>Gender:</label>
@@ -67,10 +106,13 @@
         <button type="submit">Submit</button>
     </form></body><h2>
 
+        <a href="#about">Personal details</a>
+    <hr style="color:blue">
+  </section>
+  
 
-
-
-    <h1>My Location</h1>
+  <section id = "hospital"></section>
+    <h1>Hospitals near me.</h1>
     <iframe 
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124222.55278487854!2d74.6679142708206!3d13.3530883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbca4a9c4b4ba9b%3A0xd270efcb8ce4678e!2sKasturba%20Hospital%2C%20Manipal!5e0!3m2!1sen!2sin!4v1736875056891!5m2!1sen!2sin" 
     width="600" 
@@ -80,9 +122,14 @@
     loading="lazy" 
     referrerpolicy="no-referrer-when-downgrade">
     </iframe>
+    <a href="#hospital">Back to Our doctors</a>
+            <hr style="color:blue">
+            </section>
+
+    <section id = "doctors"></section>
     <table border="1">
         <thead>
-            <tr>
+            <tr style="background-color: lightgray;">
                 <th>Serial no.</th>
                 <th>Doctor:</th>
                 <th>Abbout:</th>
@@ -91,57 +138,110 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr style="background-color: lightgray;">
                 <td>001</td>
-                <td>Opthalmologost</td>
-                <td>----img---</td>
-                <td>--------</td>
-                <td><button class="btn btn-2"><a href="https://www.google.com">Learn More</a></button></td>
+                <td>Opthalmologost
+                    Name: Dr. Dhananjay Malankar
+                </td>
+                <td><img src="Desktop/Screenshot 2025-01-15 at 7.30.31 PM.png" width="300" height="200"></td>
+                <td>MBBS from Kasturba Medical College Manipal and then M.S (Ophthal) from the same college. 
+                    Was recepient of Dr Srinivas Rao best Opthalmologist and has over 16 years of experience in this field.</td>
+                <td><button class="btn btn-2"><a href="https://www.google.com">Book now</a></button></td>
             </tr>
-            <tr>
+            <tr style="background-color: lightgray;">
                 <td>002</td>
-                <td>Oncologist</td>             
-                <td>11:00am - 12:00am</td>
-                <td>11:00am - 12:00am</td>
-                <td><button class="btn btn-2"><a href="https://www.google.com">Learn More</a></button></td>
+                <td>Oncologist
+                    Name: Dr. Suresh H Advani
+                </td>             
+                <td><img src="Desktop/Screenshot 2025-01-15 at 7.29.45 PM.png" width="300" height="200"></td>
+                <td>HOD & Consultant - Medical Oncology Haematology & Haemato-Oncology.
+                    MBBS | MD (Internal Medicine) | DM (Medical Oncology) | ESMO Certification (European Society of Medical Oncology Accreditation)
+                </td>
+                <td><button class="btn btn-2"><a href="https://www.google.com">Book now</a></button></td>
 
             </tr>
-            <tr>
+            <tr style="background-color: lightgray;">
                 <td>003</td>
-                <td>Orthopedician</td>
-                <td>5:00pm - 6:00pm</td>
-                <td>11:00am - 12:00am</td>
-                <td><button class="btn btn-2"><a href="https://www.google.com">Learn More</a></button></td>
+                <td>Orthopedician
+                    Name: Dr. Manish Samson
+                </td>
+                <td><img src="Desktop/Screenshot 2025-01-15 at 7.04.57 PM.png" width="300" height="200"></td>
+                <td>MBBS, D.Orth, MS (Orth), MCh Orth
+                    Sr. Consultant Orthopaedic & Joint Replacement Surgeon. 29+ Years of experience. </td>
+                <td><button class="btn btn-2"><a href="https://www.google.com">Book now</a></button></td>
             </tr>
-            <tr>
+            <tr style="background-color: lightgray;">
                 <td>004</td>
-                <td>Pediatrician</td>
-                <td>7:00pm - 8:00pm</td>
-                <td>11:00am - 12:00am</td>
-                <td><button class="btn btn-2"><a href="https://www.google.com">Learn More</a></button></td>
+                <td>Pediatrician
+                    Name: Dr. Sushma Kulkarni
+                </td>
+                <td><img src="Desktop/Screenshot 2025-01-15 at 7.29.11 PM.png" width="300" height="200"></td>
+                <td>MS – General Surgery, MCH – Cardiothoracic and Vascular Surgery, Fellowship in Adult Cardiac and Heart Failure Surgery, Fellowship in Paediatric and Neonatal Cardiac Surgery
+                    Over 15 years of experience in diagnosing and treating children./td>
+                <td><button class="btn btn-2"><a href="https://www.google.com">Book now</a></button></td>
             </tr>
-            <tr>
+            <tr style="background-color: lightgray;">
                 <td>005</td>
-                <td>ENT specialist</td>
-                <td>8:00pm - 9:00pm</td>
+                <td>ENT specialist
+                    Name: Dr. Ravi Kumar
+                </td>
+                <td><img src="Desktop/Screenshot 2025-01-15 at 7.29.29 PM.png" width="300" height="200"></td>
                 <td>11:00am - 12:00am</td>
-                <td><button class="btn btn-2"><a href="https://www.google.com">Learn More</a></button></td>
+                <td><button class="btn btn-2"><a href="https://www.google.com">Book now</a></button></td>
             </tr>
-            <tr>
+            <tr style="background-color: lightgray;">
                 <td>006</td>
-                <td>Psychiatrist</td>
-                <td>8:00pm - 9:00pm</td>
-                <td>11:00am - 12:00am</td>
-                <td><button class="btn btn-2"><a href="https://www.google.com">Learn More</a></button></td>
+                <td>Psychiatrist
+                    Name: Dr. Sushma Pai
+                </td>
+                <td><img src="Desktop/Screenshot 2025-01-15 at 7.30.06 PM.png" width="300" height="200"></td>
+                <td>MBBS, FRCS (ENT- RCPS Glasgow), FRCS (ENT-RCS- Edinburgh), F.R.C.S. (ORL - HNS)
+                    Experience: 30+ Years</td>
+                <td><button class="btn btn-2"><a href="https://www.google.com">Book now</a></button></td>
             </tr>
-            <tr>
+            <tr style="background-color: lightgray;">
                 <td>007</td>
-                <td>Gynacologist</td>
-                <td>8:00pm - 9:00pm</td>
-                <td>11:00am - 12:00am</td>
-                <td><button class="btn btn-2"><a href="https://www.google.com">Learn More</a></button></td>
+                <td>Gynacologist
+                    Name: Dr. Venugopal Iyer
+                </td>
+                <td><img src="Desktop/Screenshot 2025-01-15 at 7.29.45 PM.png" width="300" height="200"></td>
+                <td>Fellow of the Indian College of Obstetrics and Gynecology (FICOG) with over 40 years of experience 
+                </td>
+                <td><button class="btn btn-2"><a href="https://www.google.com">Book now</a></button></td>
             </tr>
             </tbody>
+            <a href="#doctor">Back to Our doctors</a>
+            <hr style="color:blue">
+            </section>
+  
+            <section id = "review"></section>
+
+            <h5>Reviews:
+                <p>Dr. Dhananjay Malankar is a very good doctor. He is very patient and listens to all your problems. He is very experienced and has a lot of knowledge in his field. I would recommend him to anyone who has eye problems.</p>
+                <p>Dr. Suresh H Advani is a very good doctor. Their treatment plan helped me and has cured my cancer completely now. Extremmely grateful to him!</p>
+                <p>I am extremely grateful to Dr. Manish Samson for the outstanding care he provided during my mother’s knee replacement surgery. His expertise and kindness made the entire process seamless. The surgery was a great success.</p>
+                <p>Dr. Sushma Kulkarni was attentive, thorough, and explained everything clearly. She is very patient and listens to all your problems. She is very experienced and has a lot of knowledge in his field. I would recommend him to anyone who has children. 
+                </p>
+                <p>I visited Dr. Ravi Kumar for dizziness and headaches. The staff was friendly, and Dr. Ravi Kumar was thorough and patient. They explained my condition clearly and created a treatment plan that worked well for me. 
+                    I’ve seen significant improvement and appreciate their compassionate care. Highly recommend!</p>
+                <p>Dr. Sushma Pai is a very good doctor. He is very patient and listens to all your problems. 
+                    She is very experienced and has a lot of knowledge in his field.</p>
+                <p>Dr. Venugopal Iyer is an extremely professonal doctor. He solved all my gynecological problems and has an extremely safe environment.</p>
+
+                <a href="#review">Back to Our doctors</a>
+                <hr style="color:blue">
+                </section>
+            </h5>
+
+            <section id = "contact"></section>
+            <h4><b>More information:</b></h4>
+            <p> Please visit our website <a href="https://www.google.com">here</a>for further information on doctors and available slots!</p>
+            <p>For any other queries please contact us at <a href="mailto:bellnyx.123@gmail.com"></a> or call us on <a href="tel:+1234567890"></a>from 9:00am to 9:00pm from Monday to Friday to find your doctor.</p>
+            
+            <a href="#doctor">Back to Our doctors</a>
+            <hr style="color:blue">
+            </section>
+
 </body>
 </html>
 
